@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import {Link} from 'react-router-dom';
-import { Typography, Box, Divider, IconButton, AppBar, Toolbar, List, ListItem, Button, CssBaseline } from '@mui/material';
+import { Typography, Box, Divider, IconButton, CssBaseline, Avatar } from '@mui/material';
 import Brands from '../components/Brands';
 import '../styles.css';
 import MPProducts from '../components/MPProducts';
@@ -28,14 +28,14 @@ const LandingScreen = () => {
             Somos la tienda que estabas buscando
         </Typography>
 
-        <Box
+        <Avatar
+          variant='rounded'
           component='figure' 
-          sx={{borderRadius: '10px', display: 'flex', justifyContent: 'center'}} >
+          sx={{width:{xs: '20rem', sm:'35rem'}, height:{xs:'17rem', sm:'25rem'}, margin:'auto',}} >
            <img src='https://media.istockphoto.com/photos/clothes-shop-interior-picture-id901863672?k=20&m=901863672&s=170667a&w=0&h=eotKOl8L6c3zO5lvJG4xzFZ1c3hV1EHV2MzxDQiOjSs=' 
               alt='Tienda'
-              styles={{width: 200}}
               className='storeImage' />
-        </Box>
+        </Avatar>
 
         {/* Marcas */}
         <Typography 
