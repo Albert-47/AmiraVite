@@ -1,4 +1,6 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { Card, CardContent, CardMedia, Grid, IconButton, Typography } from '@mui/material';
 import { getCategoryData } from '../data/merch';
@@ -7,15 +9,21 @@ import '../styles.js';
 
 const Categories = () => {
 
+  const [data, setData] = useState([]);
+  
   const { category } = useParams( 'category' );
-
-  const data = getCategoryData( category );
-
-  const { items } = data;
-
+  
+  useEffect(() => {
+    axios.get(`http://localhost:8000/categories/${category}`)
+    .then((res) => {
+      setData(res.data)
+    });
+  }, [category]);
+  
+  
   return (
       <Grid container justifyContent='center' spacing={2}>
-        { items.map( item => (
+        { data.map( item => (
           <Grid item key={item.name}>
           <Card sx={{ maxWidth: 345, mt: 2, minWidth:{xs: '100px', sm: '267px'} }}>
             <CardMedia
