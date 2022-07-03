@@ -1,14 +1,13 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import {Link} from 'react-router-dom';
 import { Typography, Box, Divider, IconButton, CssBaseline, Avatar } from '@mui/material';
 import Brands from '../components/Brands';
-import '../styles.css';
+import '../styles.js';
 import MPProducts from '../components/MPProducts';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import { Container } from '@mui/system';
-import { categories } from '../data/categories';
+import AmiraLogo from '../assets/amiraIcon.jpg';
 
 
 
@@ -18,12 +17,15 @@ const LandingScreen = () => {
   return (
     <>
     <CssBaseline />
+    <Box sx={{width: '100%', display:{xs:'none', sm: 'block'}}}>
+      <img src={AmiraLogo} alt="Amira Logo" style={{width: '100%'}} /> 
+    </Box>
 
       <Container>
 
         <Typography 
           variant='h2'
-          sx={{margin:'20px 0px 50px', }} 
+          sx={{margin:'20px 0px 50px', fontFamily: 'Merriweather, serif' }} 
           >
             Somos la tienda que estabas buscando
         </Typography>
@@ -60,7 +62,7 @@ const LandingScreen = () => {
 
       <Divider />
 
-      <Box component='footer' >
+      <Box component='footer' sx={{bgcolor: 'rgba(235,110,22,0.8519782913165266)'}} >
         <Typography variant='subtitle2' align='center' sx={{paddingTop:2}} >Visítanos! </Typography>
         <Typography variant='subtitle2' align='center' sx={{color: 'gray'}} >Los Guajiros, Pasillo Sambilito... Ustedes saben donde es... </Typography>
         <Typography variant='subtitle2' align='center' >... O contáctanos por nuestras redes: </Typography>

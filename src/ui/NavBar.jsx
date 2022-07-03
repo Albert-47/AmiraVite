@@ -15,20 +15,21 @@ const NavBar = () => {
   return (
     <>
     <CssBaseline />
-    <AppBar position='sticky' sx={{width: '100%'}} color='default' >
+    <AppBar position='sticky' sx={{width: '100%'}}  >
       <Container>
         <Toolbar>
           <IconButton
             onClick={() => setDrawer(true)}
-            sx={{display:{sx:'block', sm:'none'}}}>
+            sx={{display:{xs:'block', sm:'none'}}}>
             <MenuIcon />
           </IconButton>
             {categories.map(category => (
                 <Button key={category} 
                         variant='text'
-                        sx={{display:{xs:'none', sm:'flex'}, padding:'0px', height:'2rem', margin:{xs:'10px'}}}>
+                        sx={{display:{xs:'none', sm:'flex'}, padding:'0px', height:'2rem', margin:{xs:'10px'}}}
+                        color='warning'>
                           <Link to={`/Categories/${category}`}
-                                style={{textDecoration: 'none', padding:'5px'}}>
+                                style={{textDecoration: 'none', padding:'5px', color:'orange'}}>
                                   {category} 
                           </Link>
                 </Button>
@@ -56,9 +57,10 @@ const NavBar = () => {
                     <Button key={category} 
                             variant='text'
                             sx={{padding:'0px', height:'2rem', margin:{xs:'10px'}}}
-                            onClick={() => setDrawer(false)}>
+                            onClick={() => setDrawer(false)}
+                            color='warning'>
                               <Link to={`/Categories/${category}`}
-                                    style={{textDecoration: 'none', padding:'5px'}}>
+                                    style={{textDecoration: 'none', padding:'5px', color:'orange'}}>
                                       {category} 
                               </Link>
                     </Button>

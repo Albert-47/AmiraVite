@@ -1,10 +1,8 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { Card, CardActions, CardContent, CardMedia, Grid, IconButton, Typography } from '@mui/material';
-import InfoIcon from '@mui/icons-material/Info';
-// import CategoryItem from '../components/CategoryItem';
+import { Card, CardContent, CardMedia, Grid, IconButton, Typography } from '@mui/material';
 import { getCategoryData } from '../data/merch';
-import '../styles.css'; 
+import '../styles.js'; 
 
 
 const Categories = () => {
@@ -19,7 +17,7 @@ const Categories = () => {
       <Grid container justifyContent='center' spacing={2}>
         { items.map( item => (
           <Grid item key={item.name}>
-          <Card sx={{ maxWidth: 345 }}>
+          <Card sx={{ maxWidth: 345, mt: 2, minWidth:{xs: '100px', sm: '267px'} }}>
             <CardMedia
               component="img"
               alt={item.name}
@@ -27,18 +25,15 @@ const Categories = () => {
               image={item.img}
               sx={{flexGrow:1, flexShrink: 1}}
             />
-            <CardContent>
+            <CardContent sx={{textAlign: 'center'}}>
               <Typography gutterBottom variant="h5" component="div">
                 {item.name}
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                12$
+                {item.price} <br /> 
+                {category === 'Zapatos' ? 'Tallas: ' + item.sizes : null }
               </Typography>
             </CardContent>
-            <CardActions>
-              <IconButton >Share</IconButton>
-              <IconButton >Learn More <InfoIcon/> </IconButton>
-            </CardActions>
           </Card>
         </Grid>
         ) ) }
