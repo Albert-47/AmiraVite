@@ -39,7 +39,8 @@ const Categories = () => {
               </Typography>
               <Typography variant="body2" color="text.secondary">
                 {item.price} <br /> 
-                {category === 'Zapatos' ? 'Tallas: ' + item.sizes : null }
+                {/* {category === 'Zapatos' ? 'Tallas: ' + item.sizes : null } */}
+                Tallas: {item.sizes}
               </Typography>
             </CardContent>
           </Card>
