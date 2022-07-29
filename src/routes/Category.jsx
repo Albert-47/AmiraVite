@@ -15,6 +15,8 @@ import "../styles.js";
 const Categories = () => {
   const [data, setData] = useState([]);
 
+  const hasItem = data[1];
+
   const { category } = useParams("category");
 
   useEffect(() => {
@@ -23,7 +25,7 @@ const Categories = () => {
     });
   }, [category]);
 
-  return (
+  return hasItem ? (
     <Grid container justifyContent="center" spacing={2}>
       {data.map((item) => (
         <Grid item key={item.name}>
@@ -48,14 +50,25 @@ const Categories = () => {
               <Typography variant="body2" color="text.secondary">
                 Precio al Mayor: {item.bulkPrice} <br />
                 Precio al Detal: {item.individualPrice} <br />
-                {/* {category === 'Zapatos' ? 'Tallas: ' + item.sizes : null } */}
-                Tallas: {item.sizes}
+                {category == ("Morrales" || "Carteras")
+                  ? null
+                  : `Tallas: ${item.sizes}`}
               </Typography>
             </CardContent>
           </Card>
         </Grid>
       ))}
     </Grid>
+  ) : (
+    <Typography
+      sx={{
+        fontSize: { xs: 30, sm: 50 },
+        textAlign: "center",
+        margin: { sm: "25% 25%", xs: "80% 15%" },
+      }}
+    >
+      Próximamente...
+    </Typography>
   );
 };
 

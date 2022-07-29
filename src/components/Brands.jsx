@@ -16,7 +16,7 @@ const Brands = () => {
             maxWidth: "100px",
           }}
         >
-          <Box sx={{ textAlign: "center", width: "100%", textAlign: "center" }}>
+          <Box sx={{ textAlign: "center", width: "100%" }}>
             <Box component="img" src={url} alt={brandName} width="100%" />
           </Box>
         </Grid>
