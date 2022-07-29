@@ -18,7 +18,7 @@ const MPProducts = () => {
           flexGrow={1}
           sx={{
             bgcolor: "rgba(50, 50, 50, 0.65)",
-            maxWidth: "300px",
+            maxWidth: { md: "300px", xs: "200px" },
             borderRadius: "10px",
           }}
         >

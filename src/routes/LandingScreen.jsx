@@ -13,20 +13,55 @@ import MPProducts from "../components/MPProducts";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import { Container } from "@mui/system";
-import AmiraLogo from "../assets/amiraIcon.jpg";
+import complexBanner from "../assets/complexBanner.jpeg";
 
 const LandingScreen = () => {
   return (
     <>
       <CssBaseline />
-      <Box sx={{ width: "100%", display: { xs: "none", sm: "block" } }}>
-        <img
-          src={AmiraLogo}
-          alt="Amira Logo"
-          style={{ width: "100%" }}
-          className="animate__animated animate__fadeIn animate__slow"
-        />
-      </Box>
+
+      {/* Banner */}
+
+      <Box
+        component="img"
+        src={complexBanner}
+        alt="Amira Logo"
+        sx={{
+          width: { md: "100%", xs: "100%" },
+          height: { lg: "38rem", xs: "auto" },
+          overflow: "hidden",
+        }}
+        className="animate__animated animate__fadeIn animate__slow"
+      />
+
+      <Typography
+        className="animate__animated animate__fadeInUp animate__slow animate__delay-1s"
+        sx={{
+          position: "absolute",
+          top: { md: "21rem", xs: "12.7rem" },
+          left: "1rem",
+          zIndex: "2000",
+          fontFamily: "Merriweather, serif",
+          fontSize: { md: "30px", xs: "12px" },
+          fontWeight: "800",
+        }}
+      >
+        La mejor calidad...
+      </Typography>
+      <Typography
+        className="animate__animated animate__fadeInUp animate__slow animate__delay-2s"
+        sx={{
+          position: "absolute",
+          top: { md: "21rem", xs: "12.7rem" },
+          left: { md: "67rem", xs: "17rem" },
+          zIndex: "2000",
+          fontFamily: "Merriweather, serif",
+          fontSize: { md: "30px", xs: "12px" },
+          fontWeight: "800",
+        }}
+      >
+        A tu alcance...
+      </Typography>
 
       <Container>
         <Typography

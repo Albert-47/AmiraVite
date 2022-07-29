@@ -81,22 +81,15 @@ const NavBar = () => {
           <Divider />
           {categories.map((category) => (
             <Button
+              component={Link}
+              to={`/Categories/${category}`}
               key={category}
               variant="text"
-              sx={{ padding: "0px", height: "2rem", margin: { xs: "10px" } }}
+              sx={{ height: "2rem", margin: { xs: "10px" } }}
               onClick={() => setDrawer(false)}
               color="warning"
             >
-              <Link
-                to={`/Categories/${category}`}
-                style={{
-                  textDecoration: "none",
-                  padding: "5px",
-                  color: "orange",
-                }}
-              >
-                {category}
-              </Link>
+              {category}
             </Button>
           ))}
         </SwipeableDrawer>
