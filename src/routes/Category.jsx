@@ -15,7 +15,7 @@ import "../styles.js";
 const Categories = () => {
   const [data, setData] = useState([]);
 
-  const hasItem = data[1];
+  const hasItem = data[0];
 
   const { category } = useParams("category");
 
@@ -28,7 +28,11 @@ const Categories = () => {
   return hasItem ? (
     <Grid container justifyContent="center" spacing={2}>
       {data.map((item) => (
-        <Grid item key={item.name}>
+        <Grid
+          item
+          key={item.name}
+          className="animate__animated animate__fadeIn animate__slow"
+        >
           <Card
             sx={{
               maxWidth: 345,

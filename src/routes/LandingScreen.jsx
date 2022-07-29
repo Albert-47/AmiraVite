@@ -9,7 +9,6 @@ import {
   Avatar,
 } from "@mui/material";
 import Brands from "../components/Brands";
-import "../styles.js";
 import MPProducts from "../components/MPProducts";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -21,7 +20,12 @@ const LandingScreen = () => {
     <>
       <CssBaseline />
       <Box sx={{ width: "100%", display: { xs: "none", sm: "block" } }}>
-        <img src={AmiraLogo} alt="Amira Logo" style={{ width: "100%" }} />
+        <img
+          src={AmiraLogo}
+          alt="Amira Logo"
+          style={{ width: "100%" }}
+          className="animate__animated animate__fadeIn animate__slow"
+        />
       </Box>
 
       <Container>
@@ -36,21 +40,18 @@ const LandingScreen = () => {
           Somos la tienda que estabas buscando
         </Typography>
 
-        <Avatar
-          variant="rounded"
-          component="figure"
+        <Box
+          component="img"
+          src="https://media.istockphoto.com/photos/clothes-shop-interior-picture-id901863672?k=20&m=901863672&s=170667a&w=0&h=eotKOl8L6c3zO5lvJG4xzFZ1c3hV1EHV2MzxDQiOjSs="
+          alt="Tienda"
+          className="animate__animated animate__fadeIn animate__slow"
           sx={{
-            width: { xs: "20rem", sm: "35rem" },
-            height: { xs: "17rem", sm: "25rem" },
-            margin: "auto",
+            width: { xs: "250px", sm: "500px" },
+            margin: { xs: "0% 13%", lg: "0% 25%", sm: "0% 20%" },
+            borderRadius: "10px",
+            boxShadow: "2px 2px 1px black",
           }}
-        >
-          <img
-            src="https://media.istockphoto.com/photos/clothes-shop-interior-picture-id901863672?k=20&m=901863672&s=170667a&w=0&h=eotKOl8L6c3zO5lvJG4xzFZ1c3hV1EHV2MzxDQiOjSs="
-            alt="Tienda"
-            className="storeImage"
-          />
-        </Avatar>
+        />
 
         {/* Marcas */}
         <Typography
@@ -89,7 +90,7 @@ const LandingScreen = () => {
         <Typography variant="subtitle2" align="center" sx={{ paddingTop: 2 }}>
           Visítanos!{" "}
         </Typography>
-        <Typography variant="subtitle2" align="center" sx={{ color: "gray" }}>
+        <Typography variant="subtitle2" align="center" sx={{ color: "black" }}>
           Los Guajiros, Pasillo Sambilito... Ustedes saben donde es...{" "}
         </Typography>
         <Typography variant="subtitle2" align="center">

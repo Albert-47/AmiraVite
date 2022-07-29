@@ -1,18 +1,33 @@
-import { Grid } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import React from "react";
 import { mpShoes } from "../data/mpShoes";
 
 const MPProducts = () => {
   return (
-    <Grid container gap={2} justifyContent="space-evenly" alignContent="center">
+    <Grid
+      container
+      gap={2}
+      justifyContent="space-evenly"
+      alignContent="center"
+      mb={2}
+    >
       {mpShoes.map(({ url, product }) => (
         <Grid
           item
           key={product}
           flexGrow={1}
-          sx={{ bgcolor: "rgba(50, 50, 50, 0.65)", maxWidth: "100px" }}
+          sx={{
+            bgcolor: "rgba(50, 50, 50, 0.65)",
+            maxWidth: "300px",
+            borderRadius: "10px",
+          }}
         >
-          <img src={url} alt={product} width="100%" />
+          <Box
+            component="img"
+            src={url}
+            alt={product}
+            sx={{ borderRadius: "10px", width: "100%", height: "100%" }}
+          />
         </Grid>
       ))}
     </Grid>
