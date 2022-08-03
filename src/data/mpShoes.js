@@ -1,22 +1,22 @@
+import shoe1 from "../assets/timberland-blanco-negro.jpg";
+import shoe2 from "../assets/timberland-azul-marino.jpg";
+import shoe3 from "../assets/caterpillar-negra.jpg";
+import shoe4 from "../assets/converse-rojo.jpg";
 export const mpShoes = [
-    {
-        product: 'shoe',
-        url: 'https://m.media-amazon.com/images/I/71IrnDFdGZL._AC_UY395_.jpg'
-    }
-    ,
-    {
-        product: 'cartera',
-        url: 'https://cdn.shopify.com/s/files/1/0289/7061/4843/products/GrisN_1000x1000.progressive.jpg?v=1590813738'
-    }
-    ,
-    {
-        product: 'morral',
-        url: 'https://http2.mlstatic.com/D_NQ_NP_633700-MLV47637622028_092021-W.jpg'
-    }
-    ,
-    {
-        product: 'reloj',
-        url: 'https://pymstatic.com/24205/conversions/en-que-mano-se-pone-el-reloj-social.jpg'
-    }
-    
-]
+  {
+    product: "shoe1",
+    url: shoe1,
+  },
+  {
+    product: "shoe2",
+    url: shoe2,
+  },
+  {
+    product: "shoe3",
+    url: shoe3,
+  },
+  {
+    product: "shoe4",
+    url: shoe4,
+  },
+];

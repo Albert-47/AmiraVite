@@ -14,6 +14,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import { Container } from "@mui/system";
 import complexBanner from "../assets/complexBanner.jpeg";
+import storeImage from "../assets/store.jpeg";
 
 const LandingScreen = () => {
   return (
@@ -40,7 +41,7 @@ const LandingScreen = () => {
           position: "absolute",
           top: { md: "21rem", xs: "12.7rem" },
           left: "1rem",
-          zIndex: "2000",
+          zIndex: "1000",
           fontFamily: "Merriweather, serif",
           fontSize: { md: "30px", xs: "12px" },
           fontWeight: "800",
@@ -54,7 +55,7 @@ const LandingScreen = () => {
           position: "absolute",
           top: { md: "21rem", xs: "12.7rem" },
           left: { md: "67rem", xs: "17rem" },
-          zIndex: "2000",
+          zIndex: "1000",
           fontFamily: "Merriweather, serif",
           fontSize: { md: "30px", xs: "12px" },
           fontWeight: "800",
@@ -77,12 +78,13 @@ const LandingScreen = () => {
 
         <Box
           component="img"
-          src="https://media.istockphoto.com/photos/clothes-shop-interior-picture-id901863672?k=20&m=901863672&s=170667a&w=0&h=eotKOl8L6c3zO5lvJG4xzFZ1c3hV1EHV2MzxDQiOjSs="
+          src={storeImage}
           alt="Tienda"
           className="animate__animated animate__fadeIn animate__slow"
           sx={{
-            width: { xs: "250px", sm: "500px" },
-            margin: { xs: "0% 13%", lg: "0% 25%", sm: "0% 20%" },
+            width: { xs: "250px", sm: "600px" },
+            height: { xs: "auto", sm: "auto" },
+            margin: { xs: "0% 13%", lg: "0% 22%", sm: "0% 20%" },
             borderRadius: "10px",
             boxShadow: "2px 2px 1px black",
           }}
@@ -123,16 +125,16 @@ const LandingScreen = () => {
         sx={{ bgcolor: "rgba(235,110,22,0.8519782913165266)" }}
       >
         <Typography variant="subtitle2" align="center" sx={{ paddingTop: 2 }}>
-          Visítanos!{" "}
+          ¡Visítanos!{" "}
         </Typography>
         <Typography variant="subtitle2" align="center" sx={{ color: "black" }}>
-          Los Guajiros, Pasillo Sambilito... Ustedes saben donde es...{" "}
+          Valencia, Mercado Los Guajiros, Pasillo Sambilito
         </Typography>
         <Typography variant="subtitle2" align="center">
           ... O contáctanos por nuestras redes:{" "}
         </Typography>
         <Box display="flex" justifyContent="center">
-          <IconButton onClick={() => alert("SIIIIIIUUUUU")}>
+          <IconButton>
             <FacebookIcon />
           </IconButton>
           <IconButton>
