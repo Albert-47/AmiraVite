@@ -20,6 +20,7 @@ const Categories = () => {
   const [data, setData] = useState([]); //Products to be shown
   const [filter, setFilter] = useState(""); //Filter option selected by the user
 
+  const serverURL = "https://amiraserver.herokuapp.com"; //Server URL
   const hasItem = data[0]; //A confirmation of the received data in the request to the server
 
   const { category } = useParams("category");
@@ -40,9 +41,7 @@ const Categories = () => {
 
   useEffect(() => {
     const definitiveData = async () => {
-      const res = await axios.get(
-        `http://localhost:8000/categories/${category}`
-      );
+      const res = await axios.get(`${serverURL}/categories/${category}`);
       const untouchedData = res.data;
       setData(untouchedData);
 
@@ -53,10 +52,6 @@ const Categories = () => {
     };
     definitiveData();
   }, [category, filter]);
-
-  // useEffect(() => {
-  //   filterData(filter);
-  // }, [filter]);
 
   return hasItem ? (
     <>
